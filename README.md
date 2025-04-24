@@ -1,12 +1,3 @@
-# Vehicle Report Exporter (Final)
+# Vehicle Report Exporter
 
-Este proyecto incluye:
-
-- Exportación a PDF, XLSX, CSV
-- Backend con Express y BullMQ
-- Redis con datos simulados
-- Frontend con tabla tipo Navixy
-- Pruebas con Vitest
-- Docker Compose listo
-
-¡Sigue las instrucciones de este archivo para ejecutar todo!
+Exporta datos de viajes en PDF, XLSX y CSV desde Redis.
