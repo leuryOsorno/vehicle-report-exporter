@@ -1,0 +1,65 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Logs
+logs/
+*.log
+*.out
+*.pid
+
+# dotenv environment files
+.env
+.env.*.local
+
+# VSCode
+.vscode/
+
+# Build outputs
+dist/
+build/
+out/
+coverage/
+.next/
+.cache/
+turbo/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Redis dump (just in case)
+dump.rdb
+
+# Docker
+docker-compose.override.yml
+*.local.yml
+
+# Output files (exports)
+output/
+*.pdf
+*.xlsx
+*.csv
+
+# Misc
+.idea/
+*.swp
+*.swo
+*.tmp
+*.bak
+
+# Vite cache
+.vite/
+
+# Vitest
+coverage/
+*.spec.*
+*.test.*
+
+# Zip and archive files
+*.zip
+*.tar.gz
+*.rar

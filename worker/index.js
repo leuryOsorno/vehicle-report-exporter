@@ -1,5 +1,5 @@
 const { Worker } = require('bullmq');
-const { generateExportFile } = require('../services/exportService');
+const { generateExportFile } = require('../backend/services/exportService');
 const fs = require('fs');
 const path = require('path');
 const { default: Redis } = require('ioredis');

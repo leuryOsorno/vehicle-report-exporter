@@ -2,5 +2,30 @@ version: '3.8'
 services:
   redis:
     image: redis:8.0-rc1-alpine
+    container_name: redis
     ports:
       - "6379:6379"
+
+  backend:
+    build:
+      context: ./backend
+    container_name: vehicle-backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - redis
+    volumes:
+      - ./backend:/app
+    working_dir: /app
+    command: node server.js
+
+  worker:
+    build:
+      context: ./worker
+    container_name: export-worker
+    depends_on:
+      - redis
+    volumes:
+      - ./worker:/app
+    working_dir: /app
+    command: node index.js
