@@ -1,0 +1,19 @@
+{
+  "name": "export-worker",
+  "version": "1.0.0",
+  "description": "Worker para manejar exportaciones con BullMQ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "docker:up": "docker compose -f ../docker-compose.yml up worker redis",
+    "docker:down": "docker compose -f ../docker-compose.yml down"
+  },
+  "dependencies": {
+    "bullmq": "^4.6.1",
+    "ioredis": "^5.3.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

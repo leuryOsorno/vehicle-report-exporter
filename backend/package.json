@@ -1,17 +1,15 @@
 {
-  "name": "vehicle-report-backend",
+  "name": "vehicle-backend",
   "version": "1.0.0",
   "scripts": {
     "start": "node server.js",
-    "worker": "node worker/index.js",
-    "services:up": "node server.js & node worker/index.js",
-    "docker:up": "docker compose -f docker-compose.yml up -d",
-    "docker:down": "docker compose -f docker-compose.yml down"
+    "docker:up": "docker compose -f ../docker-compose.yml up backend redis",
+    "docker:down": "docker compose -f ../docker-compose.yml down"
   },
   "dependencies": {
-    "express": "^4.18.2",
     "cors": "^2.8.5",
-    "bullmq": "^4.0.0",
-    "ioredis": "^5.3.2"
+    "express": "^4.18.2",
+    "ioredis": "^5.3.1",
+    "bullmq": "^4.5.1"
   }
 }

@@ -1,7 +1,7 @@
 const Redis = require('ioredis');
-const { exportToPDF } = require('./exporters/exportToPDF');
-const { exportToXLSX } = require('./exporters/exportToXLSX');
-const { exportToCSV } = require('./exporters/exportToCSV');
+const { exportToPDF } = require('../../worker/exporters/exportToPDF');
+const { exportToXLSX } = require('../../worker/exporters/exportToXLSX');
+const { exportToCSV } = require('../../worker/exporters/exportToCSV');
 
 const redis = new Redis({ host: 'redis', port: 6379 });
 
