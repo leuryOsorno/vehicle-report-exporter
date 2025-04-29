@@ -5,5 +5,5 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-EXPOSE 3000
+EXPOSE 3030
 CMD ["sh", "-c", "npm install && node server.js"]

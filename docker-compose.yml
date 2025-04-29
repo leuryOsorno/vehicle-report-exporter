@@ -11,12 +11,13 @@ services:
       context: ./backend
     container_name: vehicle-backend
     ports:
-      - "3000:3000"
+      - "3030:3030"
     depends_on:
       - redis
     volumes:
       - ./backend:/app
       - /app/node_modules
+      - ./output:/output  # 👈 monta el directorio output
     working_dir: /app
     command: node server.js
 
@@ -28,5 +29,6 @@ services:
       - redis
     volumes:
       - ./worker:/app
+      - ./output:/output  # 👈 mismo volumen compartido
     working_dir: /app
     command: node index.js

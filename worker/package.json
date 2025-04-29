@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "bullmq": "^4.6.1",
-    "ioredis": "^5.3.2"
+    "exceljs": "^4.4.0",
+    "ioredis": "^5.3.2",
+    "json2csv": "^4.5.4",
+    "pdfmake": "^0.2.19"
   },
   "engines": {
     "node": ">=18"
