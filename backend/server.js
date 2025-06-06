@@ -1,3 +1,4 @@
+const Redis = require('ioredis');
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
@@ -16,9 +17,12 @@ loadMockData();
 
 app.get('/report/data', async (req, res) => {
   try {
+    console.info('loadData',req,res);
+    const redis = new Redis({ host: 'redis', port: 6379 });
     const raw = await redis.get('report:data');
     const data = JSON.parse(raw);
     res.json(data);
+    await redis.disconnect();
   } catch (err) {
     console.error('Error al obtener datos de Redis:', err);
     res.status(500).json({ error: 'No se pudieron obtener los datos del reporte' });
